@@ -1,0 +1,37 @@
+﻿
+body{
+    background-color: #DEDBDA;
+    color: #fff;
+}
+.genre_drop{
+    border-radius: 5px;
+    height: 30px;
+}
+.button{
+    padding: 30px;
+}
+.book_img{
+    height:330px;
+    width:220px;
+    float: left
+}
+.book{
+    padding: 30px;
+    color: #000000;
+}
+.book_about{
+    color:#E59C16;
+}
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
