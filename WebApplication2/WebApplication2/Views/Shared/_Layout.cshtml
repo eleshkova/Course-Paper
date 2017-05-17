@@ -30,6 +30,12 @@
                 $(".books").load('@Url.Action("Books", "Home")?genre='+genre);
             });
         });
+        $(document).ready(function () {
+            $(document).on("click", ".result", function () {
+                
+                $(".res").load('@Url.Action("CheckAnswer", "Test")');
+            });
+        });
     </script>
     @RenderSection("scripts", required: false)
 </body>

@@ -1,0 +1,17 @@
+﻿@model IList<WebApplication2.Models.Table>
+@{
+    ViewBag.Title = "CheckResults";
+}
+
+    @foreach (var a in Model)
+    {
+        if (@a.Type == "a")
+        {
+        <button class="answer btn btn-success btn-lg">@a.Answer fdggf</button>
+        }
+        else
+        {
+            <button class="answer btn btn-success btn-lg">@a.Answer aaaaa</button>
+        }
+    }
+

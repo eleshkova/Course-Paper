@@ -7,11 +7,11 @@
 @foreach (WebApplication2.Models.Book b in Model)
 {
     <div class="book">
-        <img src="~/images/@b.PictureUrl" class="book_img">
+        <div class="container image"><img src="~/images/@b.PictureUrl" class="book_img"></div>
         <h2 class="book_about">@b.Name</h2>
         <h3 class="book_about">@b.Author</h3>
         <h4>@b.Genre</h4>
-        <p>@b.Description</p>
+        <p class="description">@b.Description</p>
     </div>
 }
 

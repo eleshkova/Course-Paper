@@ -1,27 +1,45 @@
 ﻿
+
 body{
-    background-color: #DEDBDA;
-    color: #fff;
+    background: url(/images/background1.jpg);
+    opacity: 1.5;
+    color: #FFF;
 }
+
 .genre_drop{
     border-radius: 5px;
     height: 30px;
 }
+
+.btn{
+background-color: #FFA250;
+color: #FFF;
+}
 .button{
     padding: 30px;
 }
-.book_img{
-    height:330px;
-    width:220px;
+
+.book_img, .image{
+    max-height:270px;
+    max-width:170px;
     float: left
 }
+
 .book{
-    padding: 30px;
+    border: 1px solid #808080;
+    margin: 15px;
+    padding:10px;
+    overflow: hidden;
+    background: rgba( 222, 222, 222, 0.5);
     color: #000000;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.book_about{
-    color:#E59C16;
+.description{
+    float:right;
+    max-width: 750px;  
 }
+
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */

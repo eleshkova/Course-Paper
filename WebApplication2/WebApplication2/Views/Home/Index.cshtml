@@ -5,30 +5,37 @@
 <div class="container">
     <div>
         <h1 class="text-center">RandomBook</h1>
+        <p class="lead">Не знаете что почитать? Мы вам поможем! Пройдите тест и узнайте, какую книгу вам стоит прочесть.</p>
     </div>
-<div class="genre text-center">
-    <p class="lead">Жанр:</p>
-       
-       
-        <select class="genre_drop ">
-            <option>Любой</option>
-            <option>Фантастика</option>
-            <option>Детективы и боевики</option>
-            <option>Современная проза</option>
-            <option>Классическая проза</option>
-            <option>Приключения</option>
-            <option>Детские</option>
-            <option>Документальные</option>
-            <option>Любовные романы</option>
-            <option>Поэзия и драматургия</option>
-            <option>Ужасы и Мистика</option>
-        </select>
-        
-</div>
     <div class="container text-center button">
-        <button type="button" class="btn btn-warning btn-lg show_book ">Мне повезет</button>
-    <div class="books">
+        
+        @Html.ActionLink("Пройти тест", "Test", "Test", new { area = "" }, new { @class = "btn btn-warning btn-lg show_book" })
+    </div>
+    <p class="lead text-center">Или</p>
+        <div class="genre text-center">
+            <p class="lead">Получите случайную книгу</p>
+            <p class="lead">Жанр:</p>
 
-    </div>
-    </div>
+
+            <select class="genre_drop ">
+                <option>Любой</option>
+                <option>Фантастика</option>
+                <option>Детективы и боевики</option>
+                <option>Современная проза</option>
+                <option>Классическая проза</option>
+                <option>Приключения</option>
+                <option>Детские</option>
+                <option>Документальные</option>
+                <option>Любовные романы</option>
+                <option>Поэзия и драматургия</option>
+                <option>Ужасы и Мистика</option>
+            </select>
+
+        </div>
+        <div class="container text-center button">
+            <button type="button" class="btn btn-warning btn-lg show_book ">Мне повезет!</button>
+            <div class="books">
+
+            </div>
+        </div>
     </div>

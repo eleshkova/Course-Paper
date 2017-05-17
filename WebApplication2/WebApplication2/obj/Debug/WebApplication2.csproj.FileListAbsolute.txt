@@ -187,3 +187,4 @@ C:\Users\Sergey\Desktop\WebApplication2\WebApplication2\bin\Newtonsoft.Json.xml
 C:\Users\Sergey\Desktop\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
 C:\Users\Sergey\Desktop\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\Sergey\Desktop\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\Sergey\Desktop\WebApplication2\WebApplication2\bin\ru\EntityFramework.resources.dll

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication2.Models;
+using System.Data.Entity;
 
 namespace WebApplication2.Controllers
 {
@@ -24,5 +25,6 @@ namespace WebApplication2.Controllers
             ViewBag.Books = allbooks;
             return View(allbooks);
         }
+        
     }
 }
