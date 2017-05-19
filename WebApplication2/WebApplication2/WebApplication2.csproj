@@ -181,9 +181,6 @@
     <Compile Include="Models\Questions.cs">
       <DependentUpon>Test.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Results.cs">
-      <DependentUpon>Test.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Table.cs">
       <DependentUpon>Test.tt</DependentUpon>
     </Compile>

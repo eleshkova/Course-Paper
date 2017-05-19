@@ -7,21 +7,13 @@
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="Text" Type="nvarchar(max)" />
   </EntityType>
-  <EntityType Name="Results">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Type" Type="nchar" MaxLength="10" Nullable="false" />
-  </EntityType>
   <EntityType Name="Table">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" />
     <Property Name="Answer" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Type" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Type" Type="bit" Nullable="false" />
     <Property Name="QuestionId" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_Answers_Questions">
@@ -38,7 +30,6 @@
   </Association>
   <EntityContainer Name="Хранилище TestModelContainer">
     <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Results" EntityType="Self.Results" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Answers_Questions" Association="Self.FK_Answers_Questions">
       <End Role="Questions" EntitySet="Questions" />

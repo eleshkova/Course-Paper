@@ -12,21 +12,13 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Text" Type="nvarchar(max)" />
         </EntityType>
-        <EntityType Name="Results">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Type" Type="nchar" MaxLength="10" Nullable="false" />
-        </EntityType>
         <EntityType Name="Table">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Answer" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Type" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Type" Type="bit" Nullable="false" />
           <Property Name="QuestionId" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_Answers_Questions">
@@ -43,7 +35,6 @@
         </Association>
         <EntityContainer Name="Хранилище TestModelContainer">
           <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Results" EntityType="Self.Results" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Answers_Questions" Association="Self.FK_Answers_Questions">
             <End Role="Questions" EntitySet="Questions" />
@@ -68,7 +59,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="Boolean" Nullable="false" />
           <Property Name="QuestionId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Questions" Relationship="Self.FK_Answers_Questions" FromRole="Table" ToRole="Questions" />
         </EntityType>
@@ -91,16 +82,7 @@
             <End Role="Questions" EntitySet="Questions" />
             <End Role="Table" EntitySet="Table" />
           </AssociationSet>
-          <EntitySet Name="Results" EntityType="TestModel.Results" />
         </EntityContainer>
-        <EntityType Name="Results">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Type" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -122,15 +104,6 @@
                 <ScalarProperty Name="Answer" ColumnName="Answer" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Results">
-            <EntityTypeMapping TypeName="TestModel.Results">
-              <MappingFragment StoreEntitySet="Results">
-                <ScalarProperty Name="Type" ColumnName="Type" />
-                <ScalarProperty Name="Text" ColumnName="Text" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

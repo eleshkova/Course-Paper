@@ -8,7 +8,6 @@
         <EntityTypeShape EntityType="TestModel.Questions" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="TestModel.Table" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="TestModel.FK_Answers_Questions" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="TestModel.Results" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

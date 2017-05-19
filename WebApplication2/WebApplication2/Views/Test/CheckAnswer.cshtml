@@ -5,13 +5,13 @@
 
     @foreach (var a in Model)
     {
-        if (@a.Type == "a")
-        {
-        <button class="answer btn btn-success btn-lg">@a.Answer fdggf</button>
-        }
-        else
-        {
-            <button class="answer btn btn-success btn-lg">@a.Answer aaaaa</button>
-        }
+            if (@a.Type==true)
+            {
+            <div style="color:#fff;">@a.Answer - <span style="color:#12834f; font-size:14px;">Правильный ответ</span></div>
+            }
+            else if (@a == ViewBag.Wrong)
+            {
+            <div style="color:#fff;">@a.Answer - <span style="color:#ff0000; font-size:14px;">Неверно</span></div>
+            }
     }
 

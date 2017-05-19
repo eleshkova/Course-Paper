@@ -34,11 +34,14 @@ color: #FFF;
     color: #000000;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .description{
     float:right;
     max-width: 750px;  
 }
-
+.home{
+    margin:30px;
+}
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 

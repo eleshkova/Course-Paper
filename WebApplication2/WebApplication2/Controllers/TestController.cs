@@ -20,10 +20,19 @@ namespace WebApplication2.Controllers
         }
         public PartialViewResult CheckAnswer(int id)
         {
+            int idQuestion = dbase.Table.Find(id).QuestionId;
             IList<Table> ans = new List<Table>();
-            foreach (var i in dbase.Table)
+            foreach (var i in dbase.Table.Where(i => i.QuestionId == idQuestion))
             {
                 ans.Add(i);
+            }
+            if (dbase.Table.Find(id).Type == true)
+            {
+                ViewBag.Wrong = null;
+            }
+            else
+            {
+                ViewBag.Wrong = dbase.Table.Find(id);
             }
             return PartialView(ans);
         }

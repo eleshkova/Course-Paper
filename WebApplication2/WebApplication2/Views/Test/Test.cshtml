@@ -1,19 +1,19 @@
-﻿
+﻿@Styles.Render("~/Content/Site.css")
 @model IEnumerable<WebApplication2.Models.Questions>
 @{
         ViewBag.Title = "Test";
 }
 
-<h2 class="text-center">Какую книгу вам стоит прочесть?</h2>
-<div>
+<h2 class="text-center">Насколько хорошо вы знаете известные произведения?</h2>
+
    @foreach (var q in Model)
    {
 
-    <div class="book"><h2>@q.Text</h2></div>
+    <div class="book"><h4>@q.Text</h4></div>
+
        foreach (var a in q.Table)
        {
-        <button type="button" class="btn btn-warning btn-lg answer ">
-                   
+        <button class="btn" id=@a.Id>
             @Ajax.ActionLink(@a.Answer,
                                  "CheckAnswer",
                                  "Test",
@@ -22,13 +22,13 @@
                                  {
                                      UpdateTargetId = @a.Id.ToString()
                                  }
-                             )</button>
-            
-                }          
-                }
-    
-    <button type="button" class="btn btn-warning btn-lg result "></button>
-</div>
-@section Scripts {
-    @Scripts.Render("~/bundles/ajax.js")
-}
+                             )
+
+        </button>
+       }
+
+
+   }
+<p class="text-center">
+    @Html.ActionLink("На главную", "Index", "Home", new { area = "" }, new { @class = "btn btn-warning btn-lg home" })
+</p>

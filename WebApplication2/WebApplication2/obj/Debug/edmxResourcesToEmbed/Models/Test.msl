@@ -19,14 +19,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Results">
-      <EntityTypeMapping TypeName="TestModel.Results">
-        <MappingFragment StoreEntitySet="Results">
-          <ScalarProperty Name="Type" ColumnName="Type" />
-          <ScalarProperty Name="Text" ColumnName="Text" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

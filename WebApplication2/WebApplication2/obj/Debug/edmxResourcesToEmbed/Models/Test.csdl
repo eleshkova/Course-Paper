@@ -14,7 +14,7 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" />
     <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Type" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="Boolean" Nullable="false" />
     <Property Name="QuestionId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Questions" Relationship="Self.FK_Answers_Questions" FromRole="Table" ToRole="Questions" />
   </EntityType>
@@ -37,14 +37,5 @@
       <End Role="Questions" EntitySet="Questions" />
       <End Role="Table" EntitySet="Table" />
     </AssociationSet>
-    <EntitySet Name="Results" EntityType="TestModel.Results" />
   </EntityContainer>
-  <EntityType Name="Results">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Type" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-  </EntityType>
 </Schema>

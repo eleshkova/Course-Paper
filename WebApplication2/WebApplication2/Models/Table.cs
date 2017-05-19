@@ -16,7 +16,7 @@ namespace WebApplication2.Models
     {
         public int Id { get; set; }
         public string Answer { get; set; }
-        public string Type { get; set; }
+        public bool Type { get; set; }
         public int QuestionId { get; set; }
     
         public virtual Questions Questions { get; set; }

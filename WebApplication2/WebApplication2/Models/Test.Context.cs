@@ -27,6 +27,5 @@ namespace WebApplication2.Models
     
         public virtual DbSet<Questions> Questions { get; set; }
         public virtual DbSet<Table> Table { get; set; }
-        public virtual DbSet<Results> Results { get; set; }
     }
 }
